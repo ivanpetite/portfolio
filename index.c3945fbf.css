@@ -1,0 +1,863 @@
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  cursor: none;
+  font-smooth: auto;
+  font-smooth: never;
+  font-smooth: always;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: #1f1e1e;
+  overflow-x: hidden;
+  background-attachment: fixed;
+  overflow-anchor: [auto];
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    cursor: none;
+  }
+}
+
+.body {
+  opacity: 1;
+}
+
+@font-face {
+  font-family: "ITC Odyssee";
+  src: url("LT_70781.866366ba.woff") format("woff"), url("LT_70781.59fb40b3.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ApercuProMono";
+  src: url("ApercuProMono.c51de143.woff2") format("woff2"), url("ApercuProMono.69fa1c3d.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TIMMONS NY 2.0";
+  src: url("TIMMONSNY20-Regular.b0cfbcb7.woff") format("woff"), url("TIMMONSNY20-Regular.77ccb4a6.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: optional;
+}
+
+.entree {
+  display: flex;
+  /*debut loader page*/
+  position: fixed;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  z-index: 100;
+  font-size: 16px;
+}
+
+.entree_end {
+  animation: disapear 0.325s ease-in forwards;
+}
+
+@keyframes disapear {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.embleme {
+  display: flex;
+  position: fixed;
+  bottom: 30px;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 95;
+}
+
+#insigne {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  margin: 0;
+  padding: 0;
+  bottom: 0px;
+  fill: rgb(197, 197, 197);
+  fill-rule: evenodd;
+}
+
+.logotype {
+  opacity: 1;
+  display: flex;
+  position: absolute;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 96;
+  backdrop-filter: blur(2px);
+}
+
+.typographie {
+  font-family: "ITC Odyssee";
+  color: transparent;
+  animation: opac_typo 0.3s ease forwards;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes opac_typo {
+  from {
+    color: transparent;
+  }
+  to {
+    color: white;
+  }
+}
+
+.banniere {
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+  z-index: -99;
+  position: relative;
+}
+
+.picture {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  overflow-x: hidden;
+  z-index: -1;
+}
+
+.img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  overflow-x: hidden;
+  z-index: -1;
+}
+
+.svg_line {
+  width: 100%;
+}
+
+.cursor {
+  display: inherit;
+}
+
+@media screen and (max-width: 424px) {
+  .cursor {
+    display: none;
+  }
+}
+
+.ligne {
+  position: absolute;
+  height: 1px;
+  bottom: 100%;
+  top: 40px;
+  margin-bottom: 0px;
+}
+
+.logo {
+  position: absolute;
+  width: auto;
+  top: 22px;
+  z-index: 0;
+  fill: #ffe0dc;
+  fill-rule: evenodd;
+  transition: all 0.33s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.hide {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+}
+
+.is_visible {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+}
+
+.txt_mobile {
+  padding: 0px;
+  position: sticky;
+}
+
+.txt_portfolio {
+  margin-left: 30px;
+  font-family: "ApercuProMono";
+  font-style: normal;
+  font-weight: 100;
+  color: #ffe0dc;
+}
+
+.txt_portfolio_menu {
+  position: sticky;
+  top: 0px;
+  font-family: "ApercuProMono";
+  font-style: normal;
+  font-weight: 100;
+  color: #ffe0dc;
+}
+
+#menu {
+  cursor: none;
+}
+
+a {
+  text-decoration: none;
+  color: #ffe0dc;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ffe0dc;
+}
+
+.sticky_main {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  top: 0px;
+  z-index: 98;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-bottom: 62px solid rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.menu_transformation {
+  display: flex;
+  position: sticky;
+  width: 100%;
+  height: 60px;
+  top: 0px;
+}
+
+.sticky_main2 {
+  display: flex;
+  /* pour le menu en mode mobile */
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0px;
+  margin-top: 0px;
+  z-index: 97;
+  visibility: collapse;
+  overflow: hidden;
+  transition: opacity 2s linear;
+}
+
+.menu_transformation2 {
+  display: flex;
+  position: sticky;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  top: 0px;
+}
+
+.sticky_main2 .collapse {
+  opacity: 1;
+}
+
+.no-padding {
+  padding: 0px;
+}
+
+.margin_top {
+  margin-top: 15px;
+}
+
+.collapse {
+  visibility: visible;
+  animation: opacity 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  animation-iteration-count: 1;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*partie projets*/
+
+.work {
+  width: auto;
+  height: auto;
+  position: relative;
+  top: 0px;
+}
+
+.projet {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  min-height: 400px;
+  max-height: 500px;
+  height: 400px;
+}
+
+.projet2 {
+  margin-top: 0px;
+  /* reduit la marge des deux derniers projets */
+  margin-bottom: 0px;
+  min-height: 400px;
+  max-height: 500px;
+  height: 400px;
+}
+
+.txt_left {
+  display: -ms-flexbox !important;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  padding: 10px;
+}
+
+.txt_right {
+  display: -ms-flexbox !important;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  padding: 10px;
+}
+
+.txt_display {
+  display: -ms-flexbox !important;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.8s ease-in;
+}
+
+.remove_text {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.33s linear;
+}
+
+/* permet d'enlever la description des projets */
+
+.illustration {
+  height: 10%;
+}
+
+.z_index {
+  z-index: 0;
+}
+
+.display-4 {
+  font-family: "ApercuProMono";
+  color: #ffe0dc;
+}
+
+.display-3 {
+  font-family: "ApercuProMono";
+  color: #7d938a;
+}
+
+.h6 {
+  font-family: "ApercuProMono";
+  color: #ffe0dc;
+}
+
+.h4 {
+  font-family: "ApercuProMono";
+  color: #7d938a;
+}
+
+.h1 {
+  font-family: "ApercuProMono";
+  color: #7d938a;
+}
+
+.arrplan_picture {
+  position: absolute;
+  object-fit: cover;
+  overflow: hidden;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  bottom: 0px;
+}
+
+.arrplan_img {
+  position: absolute;
+  top: -80px;
+  height: 140%;
+  width: 100%;
+  left: 0px;
+  object-fit: cover;
+  overflow: hidden;
+  z-index: -1;
+  margin-left: 15px;
+  padding-right: 30px;
+}
+
+.arrplan_img2 {
+  top: -80px;
+  position: absolute;
+  height: 140%;
+  width: 100%;
+  left: 0px;
+  object-fit: cover;
+  overflow-x: hidden;
+  z-index: -1;
+  margin-left: 15px;
+  padding-right: 30px;
+}
+
+/*  taille images ideale larg = 450 h= 560px */
+
+.arrplan_picture2 {
+  position: absolute;
+  object-fit: cover;
+  overflow: hidden;
+  z-index: -1;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  height: 400px;
+}
+
+.description_projet {
+  font-family: "ApercuProMono";
+  font-style: normal;
+  font-weight: 100;
+  word-spacing: -0.2em;
+  color: #ffe0dc;
+}
+
+.reseaux_sociaux {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 45px;
+  background-color: none;
+  padding: 2px;
+  margin-left: 8px;
+}
+
+.icon_footer {
+  fill: transparent;
+  fill-rule: evenodd;
+  stroke-width: 0px;
+  stroke: #ffe0dc;
+  fill: #ffe0dc;
+  width: 100%;
+  padding: 5px;
+}
+
+.is_displayed {
+  display: block;
+  /* cache ou rend visible les icons en mode mobile */
+  opacity: 1;
+}
+
+.not_displayed {
+  display: flex;
+  /* cache ou rend visible les credits+les icons en mode tablet */
+  opacity: 1;
+}
+
+.mobile_icons {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile_icons2 {
+  flex-direction: row;
+  /* pour les credits+icones en mode tablet */
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 100vw;
+}
+
+.icon_footer2 {
+  fill: transparent;
+  /* pour les credits+icones en mode tablet */
+  fill-rule: evenodd;
+  stroke-width: 1px;
+  stroke: #ffe0dc;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+}
+
+.ajustement_gauche {
+  margin-left: 10px;
+  z-index: 99;
+}
+
+/* pour le decalage des icones + signe(2022) en mode tablet */
+
+.ajustement_droit {
+  margin-right: 14px;
+  z-index: 99;
+}
+
+#mail:hover {
+  fill: #ffe0dc;
+}
+
+#linkdin:hover {
+  fill: #ffe0dc;
+}
+
+#instagram:hover {
+  fill: #ffe0dc;
+}
+
+#facebook:hover {
+  fill: #ffe0dc;
+}
+
+.txt_icon_credit {
+  font-family: "ApercuProMono";
+  font-style: normal;
+  font-weight: 100;
+  color: #ffe0dc;
+  align-items: center;
+}
+
+.txt_credits {
+  font-family: "ApercuProMono";
+  font-style: normal;
+  font-weight: 100;
+  margin: 0px;
+  color: #ebceca;
+  font-size: 0.8em;
+  text-align: start;
+}
+
+.credits {
+  background-color: none;
+  flex: 1;
+  padding: 5px 40px 20px 8px;
+}
+
+.footer {
+  z-index: 95;
+  position: relative;
+  bottom: 0px;
+  opacity: 0;
+  margin-top: 15px;
+  transition: opacity 0.5s ease-in;
+}
+
+.scroll-footer {
+  opacity: 1;
+}
+
+.scroll-description {
+  opacity: 1;
+}
+
+.scroll-projet {
+  opacity: 1;
+}
+
+.numeroprojet {
+  display: block;
+  opacity: 0;
+  transform: translateY(100%) rotateX(-89deg);
+  transform-origin: center top;
+  transform-style: preserve-3d;
+  transition-delay: 0.2s;
+  transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.title {
+  width: 100%;
+  height: 100%;
+}
+
+.title.is-inview .numeroprojet {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.3s;
+}
+
+.numeroprojet2 {
+  display: block;
+  opacity: 0;
+  transform: translateY(100%) rotateX(-89deg);
+  transform-origin: center top;
+  transform-style: preserve-3d;
+  transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.title.is-inview .numeroprojet2 {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.4s;
+}
+
+.numeroprojet3 {
+  display: block;
+  opacity: 0;
+  transform: translateY(100%) rotateX(-89deg);
+  transform-origin: center top;
+  transform-style: preserve-3d;
+  transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.title.is-inview .numeroprojet3 {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.6s;
+}
+
+.numeroprojet4 {
+  display: block;
+  opacity: 0;
+  transform: translateY(100%) rotateX(-89deg);
+  transform-origin: center top;
+  transform-style: preserve-3d;
+  transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.title.is-inview .numeroprojet4 {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.7s;
+}
+
+article {
+  margin-top: 50px;
+}
+
+.loadtransition {
+  display: flex;
+  /*debut loader page*/
+  position: fixed;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.load2transition {
+  animation: disapear2 0.5s ease-in forwards;
+}
+
+@keyframes disapear2 {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .typographie {
+    font-size: 1.5em;
+  }
+
+  .not_displayed {
+    display: none;
+    opacity: 0;
+  }
+
+  .hide {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .main-profil {
+    padding: 50px 30px 0px;
+    font-size: 0.8em;
+  }
+
+  article {
+    margin-top: 50px;
+  }
+
+  .projet {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    min-height: 400px;
+    max-height: 500px;
+    height: 400px;
+  }
+
+  .title {
+    width: 100%;
+    height: 100%;
+  }
+
+  a {
+    text-decoration: none;
+    color: #ffe0dc;
+  }
+
+  .numeroprojet {
+    display: block;
+    transform-origin: center top;
+    transform-style: preserve-3d;
+    transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  .arrplan_picture2 {
+    position: absolute;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: -1;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    height: 400px;
+  }
+
+  img {
+    vertical-align: middle;
+    border-style: none;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .typographie {
+    font-size: 1.8em;
+  }
+
+  article {
+    margin-top: 0px;
+    height: 100vh;
+    background-color: white;
+  }
+
+  .projet {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    max-height: 50vh;
+    height: 50vh;
+  }
+
+  .arrplan_img1 {
+    position: absolute;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: -1;
+    width: 100%;
+    left: 0px;
+    transform: translate(0%, 50%);
+    height: 50vh;
+    align-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .arrplan_img2 {
+    position: absolute;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: -1;
+    width: 100%;
+    left: 0px;
+    transform: translate(0%, 50%);
+    height: 50vh;
+    align-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .numeroprojet {
+    position: absolute;
+    top: 65px;
+    font-size: 8em;
+  }
+
+  .numeroprojet2 {
+    position: absolute;
+    top: 225px;
+    font-size: 4em;
+  }
+
+  .numeroprojet3 {
+    position: absolute;
+    top: 30px;
+    font-size: 1.5em;
+  }
+
+  .numeroprojet4 {
+    position: absolute;
+    top: 60px;
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .typographie {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .remove_text {
+    display: none;
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .is_displayed {
+    display: none;
+    opacity: 0;
+  }
+
+  .is_visible {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=index.c3945fbf.css.map */
